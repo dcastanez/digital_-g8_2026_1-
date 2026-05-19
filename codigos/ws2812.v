@@ -1,4 +1,4 @@
-module ws2812(clk, init_led, rst_cmd, rgb, dout, done_led);
+module ws2812(clk, rgb, init_led, rst_cmd, dout, done_led);
   input rgb;
   input init_led;
   input rst_cmd;
