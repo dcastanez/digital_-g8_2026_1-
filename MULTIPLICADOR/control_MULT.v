@@ -50,7 +50,71 @@ reg [3:0]count;
           state = SHIFT;
 
       SHIFT:
-        if (B)
-          state = ADD;
+        if (z)
+          state = END;
         else
-          state = SHIFT;
+          state = START;
+
+      ADD:
+        state = SHIFT;
+
+      END:begin
+        count = count + 1;
+        if (count>9);
+          state = CHECK;
+        else
+          state = END;
+      end
+
+        default:
+          state = CHECK;
+      endcase
+  end
+end
+
+  always @ (state) begin
+    case (state)
+      CHECK:begin
+        rs   = 0;
+        sh   = 0;
+        ad   = 0;
+        done = 0;
+      end
+      
+      START:begin
+        rs   = 1;
+        sh   = 0;
+        ad   = 0;
+        done = 0;
+      end
+      
+      SHIFT:begin
+        rs   = 0;
+        sh   = 1;
+        ad   = 0;
+        done = 0;
+      end
+      
+      ADD:begin
+        rs   = 0;
+        sh   = 0;
+        ad   = 1;
+        done = 0;
+      end
+      
+      DONE:begin
+        rs   = 0;
+        sh   = 0;
+        ad   = 0;
+        done = 1;
+      end
+      
+      default:begin
+        rs   = 0;
+        sh   = 0;
+        ad   = 0;
+        done = 0;
+      end
+    endcase
+  end
+endmodule
