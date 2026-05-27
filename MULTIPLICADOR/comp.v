@@ -4,9 +4,9 @@ module comp(
             );
 
   always @ (*) begin
-    if (B==0)
-      z=1;
+    if (B == 0)
+      z = 1;
     else
-      z=0;
+      z = 0;
   end
 endmodule
