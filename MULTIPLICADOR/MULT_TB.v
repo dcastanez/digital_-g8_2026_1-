@@ -23,3 +23,44 @@ module MULT_TB;
         @(reset_trigger);
         @(negedge clk); rst = 1;
         @(negedge clk); rst = 0;
+        -> reset_done_trigger;
+      end
+    end
+
+  initial begin
+    clk = 0;
+    init = 0;
+    rst = 0;
+    A = 16'b101;
+    B = 16'b11;
+  end
+
+  initial begin
+    #OFFSET;}
+    forever begin
+      clk = 1'b0;
+      #(PERIOD-(PERIOD*DUTY_CYCLE)) clk = 1'b1;
+      #(PERIOD*DUTY_CYCLE);
+    end
+  end
+
+  initial begin
+    #10 -> reset_trigger;
+    @ (reset_done_trigger);
+    @ (posedge clk); init = 0;
+    @ (posedge clk); init = 1;
+    for (i = 0, i < 2, i = i + 1) begin
+      @ (posedge clk);
+    end
+    init = 0;
+    for (i = 0, i < 17, i = i + 1) begin
+      @ (posedge clk);
+    end
+  end
+
+  initial begin: TEST_CASE
+    $dumpfile("MULT_TB.vcd");
+    $dumpvars(-1, uut);
+    #((PERIOD*DUTY_CYCLE)*120)$finish;
+  end
+endmodule
