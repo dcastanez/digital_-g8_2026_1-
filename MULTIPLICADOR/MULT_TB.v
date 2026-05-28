@@ -36,7 +36,7 @@ module MULT_TB;
   end
 
   initial begin
-    #OFFSET;}
+    #OFFSET;
     forever begin
       clk = 1'b0;
       #(PERIOD-(PERIOD*DUTY_CYCLE)) clk = 1'b1;
