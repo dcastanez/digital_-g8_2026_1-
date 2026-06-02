@@ -2,19 +2,24 @@ module DIV(
            input clk,
            input init,
            input rst,
-           input [15:0] A,
-           input [15:0] B,
+           input [15:0] NUM,
+           input [15:0] DEN,
+           output [15:0] R,
            output done);
 
            wire w_rs;
-           wire w_sh;
            wire w_de;
-           wire [31:0] w_R;
-           wire w_j;
+           wire w_ac;
 
-           lsr lsr0 (.clk(clk), .rs(w_rs), .sh(w_sh), .i_A(A),
-                     .R(w_R));
-           comp comp0 (.B(B)
-                       .j(w_j));
-           dec dec0 (.clk(clk), .rs(w_rs), .ad(w_ad), .j(w_j),
-                     .R(w_R))
+           wire [15:0] w_DEN;
+           wire w_DP;
+           
+           comp2 comp20 (.DEN(DEN),
+                         .c2(w_DEN));
+           dec dec0 (.clk(clk), .rs(w_rs), .de(w_de), .c2(w_DEN), .NUM(NUM),
+                     .DP(w_DP));
+           acc acc0 (.clk(clk), .rs(w_rs), .ac(w_ac),
+                     .R(R));
+           control_DIV control_DIV0 (.clk(clk), .rst(rst), .init(init), .NUM(NUM), .DEN(DEN),
+                                     .rs(w_rs), .sh(w_sh), .ac(w_ac), .done(done));
+endmodule
