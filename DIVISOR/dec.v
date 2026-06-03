@@ -6,7 +6,8 @@ module dec(
            input NUM,
            output DP
            );
-  inital DP = NUM
+  initial DP = 0
+           
   always @ (negedge clk)
     if (rs)
       DP = NUM;
