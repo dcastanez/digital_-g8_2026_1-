@@ -3,7 +3,7 @@ module DIV(
            input init,
            input rst,
            input [15:0] NUM,
-           input [15:0] DEN,
+           input [14:0] DEN,
            output [15:0] R,
            output done);
 
