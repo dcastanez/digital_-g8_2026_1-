@@ -2,7 +2,7 @@ module acc(
            input clk,
            input rs,
            input ac,
-           output [:0]R
+           output [15:0]R
            );
   initial R = 0;
 
