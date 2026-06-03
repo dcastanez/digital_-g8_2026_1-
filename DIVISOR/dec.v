@@ -2,9 +2,9 @@ module dec(
            input clk,
            input rs,
            input de,
-           input c2,
-           input NUM,
-           output DP
+           input [15:0]c2,
+           input [15:0]NUM,
+           output [15:0]DP
            );
   initial DP = 0
            
