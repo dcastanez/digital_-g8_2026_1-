@@ -4,7 +4,7 @@ module control_MULT(
                     input init,
                     input B,
                     input z,
-  
+
                     output rs,
                     output sh,
                     output ad,
@@ -33,7 +33,7 @@ reg [3:0]count;
   always @(posedge clk) begin
     if (rs)
       state = CHECK;
-    else
+    else begin
       case(state)
 
       CHECK:begin
@@ -61,7 +61,7 @@ reg [3:0]count;
 
       END:begin
         count = count + 1;
-        if (count>9);
+        if (count>9)
           state = CHECK;
         else
           state = END;
@@ -81,35 +81,35 @@ end
         ad   = 0;
         done = 0;
       end
-      
+
       START:begin
         rs   = 1;
         sh   = 0;
         ad   = 0;
         done = 0;
       end
-      
+
       SHIFT:begin
         rs   = 0;
         sh   = 1;
         ad   = 0;
         done = 0;
       end
-      
+
       ADD:begin
         rs   = 0;
         sh   = 0;
         ad   = 1;
         done = 0;
       end
-      
+
       DONE:begin
         rs   = 0;
         sh   = 0;
         ad   = 0;
         done = 1;
       end
-      
+
       default:begin
         rs   = 0;
         sh   = 0;
