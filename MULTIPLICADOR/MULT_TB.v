@@ -1,4 +1,4 @@
-`timescale 1ns/1pcs
+`timescale 1ns/1ps
 `define SIMULATION
 module MULT_TB;
   reg clk;
@@ -6,7 +6,7 @@ module MULT_TB;
   reg rst;
   reg [15:0] A;
   reg [15:0] B;
-  
+
   wire [31:0] R;
   wire done;
 
