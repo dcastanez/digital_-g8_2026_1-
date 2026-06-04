@@ -1,4 +1,4 @@
-`timescale 1ns/1ps
+`timescale 1ns / 1ps
 `define SIMULATION
 module MULT_TB;
   reg clk;
@@ -31,8 +31,8 @@ module MULT_TB;
     clk = 0;
     init = 0;
     rst = 0;
-    A = 16'b101;
-    B = 16'b11;
+    A = 16'b0000000000000101;
+    B = 16'b0000000000000011;
   end
 
   initial begin
@@ -49,11 +49,11 @@ module MULT_TB;
     @ (reset_done_trigger);
     @ (posedge clk); init = 0;
     @ (posedge clk); init = 1;
-    for (i = 0, i < 2, i = i + 1) begin
+    for (i = 0; i < 2; i = i + 1) begin
       @ (posedge clk);
     end
     init = 0;
-    for (i = 0, i < 17, i = i + 1) begin
+    for (i = 0; i < 17; i = i + 1) begin
       @ (posedge clk);
     end
   end
