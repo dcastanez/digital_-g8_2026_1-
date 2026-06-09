@@ -1,9 +1,9 @@
 module comp2(
              input [14:0]DEN,
-             output [15:0]c2 
+             output reg [15:0]c2
              );
 
   always @ (*) begin
-    c2 = ~DEN + 1
+    c2 = ~DEN + 1;
   end
 endmodule
