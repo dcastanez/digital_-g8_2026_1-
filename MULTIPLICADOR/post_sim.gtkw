@@ -1,0 +1,27 @@
+[*]
+[*] GTKWave Analyzer v3.3.117 (w)1999-2023 BSI
+[*] Tue Jun  9 17:16:38 2026
+[*]
+[dumpfile] "/home/david/unal_26_1/digital_-g8_2026_1-/MULTIPLICADOR/MULT_TB.vcd"
+[dumpfile_mtime] "Tue Jun  9 17:15:53 2026"
+[dumpfile_size] 209011
+[savefile] "/home/david/unal_26_1/digital_-g8_2026_1-/MULTIPLICADOR/post_sim.gtkw"
+[timestart] 0
+[size] 1000 600
+[pos] -1 -1
+*-19.000000 398000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] MULT_TB.
+[sst_width] 216
+[signals_width] 86
+[sst_expanded] 1
+[sst_vpaned_height] 150
+@22
+MULT_TB.uut.A[15:0]
+MULT_TB.uut.B[15:0]
+MULT_TB.uut.R[31:0]
+@28
+MULT_TB.uut.done
+@29
+MULT_TB.uut.init
+[pattern_trace] 1
+[pattern_trace] 0

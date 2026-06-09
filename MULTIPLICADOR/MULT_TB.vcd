@@ -1,0 +1,412 @@
+$date
+	Tue Jun  9 16:12:34 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module MULT_TB $end
+$scope module uut $end
+$var wire 16 ! A [15:0] $end
+$var wire 16 " B [15:0] $end
+$var wire 1 # clk $end
+$var wire 1 $ init $end
+$var wire 1 % rst $end
+$var wire 1 & w_z $end
+$var wire 1 ' w_sh $end
+$var wire 1 ( w_rs $end
+$var wire 1 ) w_ad $end
+$var wire 16 * w_B [15:0] $end
+$var wire 32 + w_A [31:0] $end
+$var wire 1 , done $end
+$var wire 32 - R [31:0] $end
+$scope module acc0 $end
+$var wire 1 # clk $end
+$var wire 1 ( rs $end
+$var wire 1 ) ad $end
+$var wire 32 . A [31:0] $end
+$var reg 32 / r [31:0] $end
+$upscope $end
+$scope module comp0 $end
+$var wire 16 0 B [15:0] $end
+$var reg 1 & z $end
+$upscope $end
+$scope module control_MULT0 $end
+$var wire 1 1 B $end
+$var wire 1 # clk $end
+$var wire 1 $ init $end
+$var wire 1 % rst $end
+$var wire 1 & z $end
+$var parameter 3 2 ADD $end
+$var parameter 3 3 CHECK $end
+$var parameter 3 4 CHECK2 $end
+$var parameter 3 5 END $end
+$var parameter 3 6 SHIFT $end
+$var parameter 3 7 START $end
+$var reg 1 ) ad $end
+$var reg 4 8 count [3:0] $end
+$var reg 1 , done $end
+$var reg 1 ( rs $end
+$var reg 1 ' sh $end
+$var reg 3 9 state [2:0] $end
+$upscope $end
+$scope module rsl0 $end
+$var wire 1 # clk $end
+$var wire 16 : i_A [15:0] $end
+$var wire 1 ( rs $end
+$var wire 1 ' sh $end
+$var reg 32 ; o_A [31:0] $end
+$upscope $end
+$scope module rsr0 $end
+$var wire 1 # clk $end
+$var wire 16 < i_B [15:0] $end
+$var wire 1 ( rs $end
+$var wire 1 ' sh $end
+$var reg 16 = o_B [15:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b0 7
+b10 6
+b101 5
+b100 4
+b1 3
+b11 2
+$end
+#0
+$dumpvars
+b11 =
+b11 <
+b101 ;
+b101 :
+b0 9
+bx 8
+11
+b11 0
+b0 /
+b101 .
+b0 -
+0,
+b101 +
+b11 *
+0)
+1(
+0'
+0&
+0%
+0$
+0#
+b11 "
+b101 !
+$end
+#10000
+b0 8
+1#
+#20000
+1%
+0#
+#30000
+1#
+#40000
+0%
+0#
+#50000
+1#
+#60000
+0#
+#70000
+1$
+1#
+#80000
+0#
+#90000
+0(
+b1 9
+1#
+#100000
+0#
+#110000
+1)
+0$
+b11 9
+1#
+#120000
+b101 -
+b101 /
+0#
+#130000
+0)
+1'
+b10 9
+1#
+#140000
+b1010 +
+b1010 .
+b1010 ;
+b1 *
+b1 0
+b1 =
+0#
+#150000
+0'
+b100 9
+1#
+#160000
+0#
+#170000
+b1 9
+1#
+#180000
+0#
+#190000
+1)
+b11 9
+1#
+#200000
+b1111 -
+b1111 /
+0#
+#210000
+0)
+1'
+b10 9
+1#
+#220000
+01
+1&
+b10100 +
+b10100 .
+b10100 ;
+b0 *
+b0 0
+b0 =
+0#
+#230000
+0'
+b100 9
+1#
+#240000
+0#
+#250000
+1,
+b101 9
+1#
+#260000
+0#
+#270000
+b1 8
+1#
+#280000
+0#
+#290000
+b10 8
+1#
+#300000
+0#
+#310000
+b11 8
+1#
+#320000
+0#
+#330000
+b100 8
+1#
+#340000
+0#
+#350000
+b101 8
+1#
+#360000
+0#
+#370000
+b110 8
+1#
+#380000
+0#
+#390000
+b111 8
+1#
+#400000
+0#
+#410000
+b1000 8
+1#
+#420000
+0#
+#430000
+b1001 8
+1#
+#440000
+0#
+#450000
+0,
+1(
+b0 9
+b1010 8
+1#
+#460000
+11
+0&
+b0 -
+b0 /
+b101 +
+b101 .
+b101 ;
+b11 *
+b11 0
+b11 =
+0#
+#470000
+b0 8
+1#
+#480000
+0#
+#490000
+1#
+#500000
+0#
+#510000
+1#
+#520000
+0#
+#530000
+1#
+#540000
+0#
+#550000
+1#
+#560000
+0#
+#570000
+1#
+#580000
+0#
+#590000
+1#
+#600000
+0#
+#610000
+1#
+#620000
+0#
+#630000
+1#
+#640000
+0#
+#650000
+1#
+#660000
+0#
+#670000
+1#
+#680000
+0#
+#690000
+1#
+#700000
+0#
+#710000
+1#
+#720000
+0#
+#730000
+1#
+#740000
+0#
+#750000
+1#
+#760000
+0#
+#770000
+1#
+#780000
+0#
+#790000
+1#
+#800000
+0#
+#810000
+1#
+#820000
+0#
+#830000
+1#
+#840000
+0#
+#850000
+1#
+#860000
+0#
+#870000
+1#
+#880000
+0#
+#890000
+1#
+#900000
+0#
+#910000
+1#
+#920000
+0#
+#930000
+1#
+#940000
+0#
+#950000
+1#
+#960000
+0#
+#970000
+1#
+#980000
+0#
+#990000
+1#
+#1000000
+0#
+#1010000
+1#
+#1020000
+0#
+#1030000
+1#
+#1040000
+0#
+#1050000
+1#
+#1060000
+0#
+#1070000
+1#
+#1080000
+0#
+#1090000
+1#
+#1100000
+0#
+#1110000
+1#
+#1120000
+0#
+#1130000
+1#
+#1140000
+0#
+#1150000
+1#
+#1160000
+0#
+#1170000
+1#
+#1180000
+0#
+#1190000
+1#
+#1200000
+0#

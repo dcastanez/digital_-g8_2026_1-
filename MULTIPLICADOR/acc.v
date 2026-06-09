@@ -3,7 +3,7 @@ module acc(
            input rs,
            input ad,
            input [31:0]A,
-           output [31:0]r
+           output reg [31:0]r
            );
   initial r = 0;
 

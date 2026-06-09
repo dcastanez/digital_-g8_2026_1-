@@ -3,7 +3,7 @@ module rsl(
            input rs,
            input sh,
            input [15:0]i_A,
-           output [31:0]o_A
+           output reg [31:0]o_A
            );
 
   always @(negedge clk)

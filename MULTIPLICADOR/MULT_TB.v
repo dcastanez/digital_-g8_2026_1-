@@ -1,5 +1,6 @@
 `timescale 1ns / 1ps
 `define SIMULATION
+
 module MULT_TB;
   reg clk;
   reg init;
@@ -15,7 +16,7 @@ module MULT_TB;
   parameter          PERIOD = 20;
   parameter real DUTY_CYCLE = 0.5;
   parameter          OFFSET = 0;
-  reg [20:0] i;
+
     event reset_trigger;
     event reset_done_trigger;
     initial begin
@@ -44,6 +45,7 @@ module MULT_TB;
     end
   end
 
+  reg [20:0] i;
   initial begin
     #10 -> reset_trigger;
     @ (reset_done_trigger);
@@ -57,6 +59,7 @@ module MULT_TB;
       @ (posedge clk);
     end
   end
+
 
   initial begin: TEST_CASE
     $dumpfile("MULT_TB.vcd");

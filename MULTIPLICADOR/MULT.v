@@ -17,7 +17,7 @@ module MULT(clk, init, rst, A, B, R, done);
 
   rsr rsr0 (.clk(clk), .rs(w_rs), .sh(w_sh), .i_B(B),
             .o_B(w_B));
-  lsr lsr0 (.clk(clk), .rs(w_rs), .sh(w_sh), .i_A(A),
+  rsl rsl0 (.clk(clk), .rs(w_rs), .sh(w_sh), .i_A(A),
             .o_A(w_A));
   comp comp0 (.B(w_B),
               .z(w_z));

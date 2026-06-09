@@ -1,6 +1,6 @@
 module comp(
             input [15:0]B,
-            output z
+            output reg z
             );
 
   always @ (*) begin

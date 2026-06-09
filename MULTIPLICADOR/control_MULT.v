@@ -5,17 +5,18 @@ module control_MULT(
                     input B,
                     input z,
 
-                    output rs,
-                    output sh,
-                    output ad,
-                    output done
+                    output reg rs,
+                    output reg sh,
+                    output reg ad,
+                    output reg done
                     );
 
-parameter CHECK = 3'b000;
-parameter START = 3'b001;
+parameter START = 3'b000;
+parameter CHECK = 3'b001;
 parameter SHIFT = 3'b010;
 parameter ADD   = 3'b011;
-parameter DONE  = 3'b100;
+parameter CHECK2 = 3'b100;
+parameter END  = 3'b101;
 
 reg [2:0]state;
 
@@ -31,56 +32,54 @@ end
 reg [3:0]count;
 
   always @(posedge clk) begin
-    if (rs)
-      state = CHECK;
+    if (rst)
+      state = START;
     else begin
       case(state)
 
-      CHECK:begin
+      START:begin
         count=0;
         if (init)
-          state = START;
-        else
           state = CHECK;
+        else
+          state = START;
       end
 
-      START:
+      CHECK:
         if (B)
           state = ADD;
         else
           state = SHIFT;
 
+      ADD:
+        state = SHIFT;
+
       SHIFT:
+        state = CHECK2;
+
+      CHECK2:
         if (z)
           state = END;
         else
-          state = START;
-
-      ADD:
-        state = SHIFT;
+          state = CHECK;
 
       END:begin
         count = count + 1;
         if (count>9)
-          state = CHECK;
+          state = START;
         else
           state = END;
       end
 
-        default:
-          state = CHECK;
+      default:
+        state = START;
+
       endcase
+    end
   end
-end
 
   always @ (state) begin
     case (state)
-      CHECK:begin
-        rs   = 0;
-        sh   = 0;
-        ad   = 0;
-        done = 0;
-      end
 
       START:begin
         rs   = 1;
@@ -89,9 +88,9 @@ end
         done = 0;
       end
 
-      SHIFT:begin
+      CHECK:begin
         rs   = 0;
-        sh   = 1;
+        sh   = 0;
         ad   = 0;
         done = 0;
       end
@@ -103,7 +102,21 @@ end
         done = 0;
       end
 
-      DONE:begin
+      SHIFT:begin
+        rs   = 0;
+        sh   = 1;
+        ad   = 0;
+        done = 0;
+      end
+
+      CHECK2:begin
+        rs   = 0;
+        sh   = 0;
+        ad   = 0;
+        done = 0;
+      end
+
+      END:begin
         rs   = 0;
         sh   = 0;
         ad   = 0;
