@@ -8,7 +8,7 @@ module BIN_BCD(
 
            wire w_rs;
            wire w_asg;
-           wire w_crc
+           wire w_crc;
            wire w_cct;
            wire w_sh;
            wire w_j;
