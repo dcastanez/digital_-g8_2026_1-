@@ -22,13 +22,13 @@ module BIN_BCD(
                      .o(R));
            comp comp0 (.clk(clk), .rs(w_rs), .asg(w_asg), .crc(w_crc),
                       .R(R[19:16]),
-                         .o(w_C));
+                      .o(w_C));
            comp comp1 (.clk(clk), .rs(w_rs), .asg(w_asg), .crc(w_crc),
                       .R(R[15:12]),
-                         .o(w_D));
+                      .o(w_D));
            comp comp2 (.clk(clk), .rs(w_rs), .asg(w_asg), .crc(w_crc),
                       .R(R[11:8]),
-                         .o(w_U));
+                      .o(w_U));
            dec dec0 (.clk(clk), .rs(w_rs), .asg(w_asg),
                      .j(w_j));
            control_BIN_BCD control_BIN_BCD0 (.clk(clk), .rst(rst), .init(init), .j(w_j),
