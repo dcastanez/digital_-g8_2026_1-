@@ -2,9 +2,9 @@ module dec(
            input clk,
            input rs,
            input dc,
-           input [7:0]c2,
-           input [7:0]R,
-           output reg [7:0]S
+           input [6:0]c2,
+           input [8:0]R,
+           output reg [8:0]S
            );
   initial S = 0;
 

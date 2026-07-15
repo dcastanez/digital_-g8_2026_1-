@@ -2,17 +2,17 @@ module lsr(
            input clk,
            input rs,
            input sh,
-           input [7:0]i_A,
-           output reg [7:0]o_A
+           input [7:0]i,
+           output reg [7:0]o
            );
 
   always @(negedge clk)
     if (rs)
-      o_A = i_A;
+      o = i;
     else begin
       if (sh)
-        o_A = o_A << 2;
+        o = o << 2;
       else
-        o_A = o_A;
+        o = o;
     end
 endmodule
