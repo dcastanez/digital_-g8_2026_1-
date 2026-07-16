@@ -3,7 +3,7 @@ module control_SQRT(
                    input rst,
                    input init,
                    input S,
-                   input [3:0]j,
+                   input j,
 
                    output reg rs,
                    output reg cct,

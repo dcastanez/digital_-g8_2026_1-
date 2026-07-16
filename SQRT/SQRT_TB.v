@@ -7,8 +7,8 @@ module SQRT_TB;
   reg rst;
   reg [7:0] A;
 
-  wire [4:0] Q;
-  wire [8:0] R;
+  wire [7:0] Q;
+  wire [7:0] R;
   wire done;
 
   SQRT uut (.clk(clk), .init(init), .rst(rst), .A(A),
@@ -32,7 +32,7 @@ module SQRT_TB;
     clk  = 0;
     init = 0;
     rst  = 0;
-    A    = 8'b00110010;
+    A    = 8'b00010110;
   end
 
   initial begin

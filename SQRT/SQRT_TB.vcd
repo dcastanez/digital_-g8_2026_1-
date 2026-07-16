@@ -1,5 +1,5 @@
 $date
-	Wed Jul 15 12:20:28 2026
+	Thu Jul 16 08:27:05 2026
 $end
 $version
 	Icarus Verilog
@@ -16,122 +16,122 @@ $var wire 1 $ rst $end
 $var wire 1 % w_sh $end
 $var wire 1 & w_s $end
 $var wire 1 ' w_rs $end
-$var wire 4 ( w_j [3:0] $end
+$var wire 1 ( w_j $end
 $var wire 1 ) w_dc $end
 $var wire 1 * w_cct $end
-$var wire 7 + w_T [6:0] $end
-$var wire 9 , w_S [8:0] $end
+$var wire 8 + w_T [7:0] $end
+$var wire 8 , w_S [7:0] $end
 $var wire 8 - w_A [7:0] $end
 $var wire 1 . done $end
-$var wire 6 / T [5:0] $end
-$var wire 9 0 R [8:0] $end
-$var wire 5 1 Q [4:0] $end
+$var wire 8 / T [7:0] $end
+$var wire 8 0 R [7:0] $end
+$var wire 8 1 Q [7:0] $end
 $scope module comp20 $end
-$var wire 6 2 T [5:0] $end
-$var reg 7 3 c2 [6:0] $end
+$var wire 1 " clk $end
+$var wire 1 * cct $end
+$var wire 8 2 T [7:0] $end
+$var reg 8 3 c2 [7:0] $end
 $upscope $end
 $scope module cont0 $end
 $var wire 1 " clk $end
 $var wire 1 % sh $end
 $var wire 1 ' rs $end
-$var reg 4 4 j [3:0] $end
+$var wire 1 ( j $end
+$var reg 3 4 h [2:0] $end
 $upscope $end
 $scope module control_SQRT0 $end
 $var wire 1 5 S $end
 $var wire 1 " clk $end
 $var wire 1 # init $end
-$var wire 4 6 j [3:0] $end
+$var wire 1 ( j $end
 $var wire 1 $ rst $end
-$var parameter 3 7 ASIG $end
-$var parameter 3 8 CHECK1 $end
-$var parameter 3 9 CHECK2 $end
-$var parameter 3 : CONCAT $end
-$var parameter 3 ; DEC $end
-$var parameter 3 < DONE $end
-$var parameter 3 = SHIFT $end
-$var parameter 3 > START $end
+$var parameter 3 6 ASIG $end
+$var parameter 3 7 CHECK1 $end
+$var parameter 3 8 CHECK2 $end
+$var parameter 3 9 CONCAT $end
+$var parameter 3 : DEC $end
+$var parameter 3 ; DONE $end
+$var parameter 3 < SHIFT $end
+$var parameter 3 = START $end
 $var reg 1 * cct $end
-$var reg 4 ? count [3:0] $end
+$var reg 4 > count [3:0] $end
 $var reg 1 ) dc $end
 $var reg 1 . done $end
 $var reg 1 ' rs $end
 $var reg 1 & s $end
 $var reg 1 % sh $end
-$var reg 4 @ state [3:0] $end
+$var reg 4 ? state [3:0] $end
 $upscope $end
 $scope module dec0 $end
-$var wire 7 A c2 [6:0] $end
+$var wire 8 @ c2 [7:0] $end
 $var wire 1 " clk $end
 $var wire 1 ) dc $end
 $var wire 1 ' rs $end
-$var wire 9 B R [8:0] $end
-$var reg 9 C S [8:0] $end
+$var wire 8 A R [7:0] $end
+$var reg 8 B S [7:0] $end
 $upscope $end
 $scope module lsr0 $end
 $var wire 1 " clk $end
-$var wire 8 D i [7:0] $end
+$var wire 8 C i [7:0] $end
 $var wire 1 ' rs $end
 $var wire 1 % sh $end
-$var reg 8 E o [7:0] $end
+$var reg 8 D o [7:0] $end
 $upscope $end
 $scope module qcct0 $end
-$var wire 1 F S $end
-$var wire 1 G cct $end
+$var wire 1 E S $end
 $var wire 1 " clk $end
 $var wire 1 ' rs $end
 $var wire 1 % sh $end
-$var reg 5 H Q [4:0] $end
+$var reg 8 F Q [7:0] $end
 $upscope $end
 $scope module rcct0 $end
-$var wire 2 I A [1:0] $end
-$var wire 9 J S [8:0] $end
+$var wire 2 G A [1:0] $end
+$var wire 8 H S [7:0] $end
 $var wire 1 * cct $end
 $var wire 1 " clk $end
 $var wire 1 ' rs $end
 $var wire 1 & s $end
-$var reg 9 K R [8:0] $end
+$var reg 8 I R [7:0] $end
 $upscope $end
 $scope module tcct0 $end
-$var wire 5 L Q [4:0] $end
+$var wire 8 J Q [7:0] $end
 $var wire 1 * cct $end
 $var wire 1 " clk $end
 $var wire 1 ' rs $end
-$var reg 6 M T [5:0] $end
+$var reg 8 K T [7:0] $end
 $upscope $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 $comment Show the parameter values. $end
 $dumpall
-b0 >
-b101 =
-b111 <
-b10 ;
-b1 :
-b110 9
-b11 8
-b100 7
+b0 =
+b101 <
+b111 ;
+b10 :
+b1 9
+b110 8
+b11 7
+b100 6
 $end
 #0
 $dumpvars
-bx M
-bx L
 bx K
-b0 J
+bx J
 bx I
-bx H
-zG
-0F
-bx E
-b110010 D
-b0 C
-bx B
+b0 H
+bx G
+bx F
+0E
+bx D
+b10110 C
+b0 B
 bx A
 bx @
 bx ?
-b0 6
+bx >
 05
-b0 4
+bx 4
 bx 3
 bx 2
 bx 1
@@ -143,14 +143,14 @@ b0 ,
 bx +
 x*
 0)
-b0 (
+x(
 0'
 x&
 x%
 0$
 0#
 0"
-b110010 !
+b10110 !
 $end
 #10000
 0.
@@ -158,36 +158,32 @@ $end
 0&
 0*
 1'
-b0 @
+b0 ?
 1"
 #20000
-b0 +
-b0 3
-b0 A
-b0 I
+b0 G
 b0 /
 b0 2
-b0 M
-b0 0
-b0 B
 b0 K
+b0 0
+b0 A
+b0 I
 b0 1
-b0 H
-b0 L
-b110010 -
-b110010 E
+b0 F
+b0 J
+b10110 -
+b10110 D
 1$
 0"
 #30000
-b100 (
+0(
 b100 4
-b100 6
 1"
 #40000
 0$
 0"
 #50000
-b0 ?
+b0 >
 1"
 #60000
 0"
@@ -199,198 +195,292 @@ b0 ?
 #90000
 1*
 0'
-b1 @
+b1 ?
 1"
 #100000
-b1111111 +
-b1111111 3
-b1111111 A
+b11111111 +
+b11111111 3
+b11111111 @
 b1 /
 b1 2
-b1 M
+b1 K
 0"
 #110000
 1)
 0*
 0#
-b10 @
+b10 ?
 1"
 #120000
-b1111111 ,
-b1111111 C
-b1111111 J
+15
+1E
+b11111111 ,
+b11111111 B
+b11111111 H
 0"
 #130000
 0)
-b11 @
+b11 ?
 1"
 #140000
 0"
 #150000
-1&
-b100 @
+1%
+b101 ?
 1"
 #160000
-b1111111 0
-b1111111 B
-b1111111 K
+b1 G
+b1011000 -
+b1011000 D
 0"
 #170000
-1%
-0&
-b101 @
+0%
+b11 4
+b110 ?
 1"
 #180000
-b11 I
-b11001000 -
-b11001000 E
 0"
 #190000
-0%
-b110 @
+1*
+b1 ?
 1"
 #200000
+b1 0
+b1 A
+b1 I
 0"
 #210000
-1.
-b111 @
+1)
+0*
+b10 ?
 1"
 #220000
+05
+0E
+b0 ,
+b0 B
+b0 H
 0"
 #230000
-b1 ?
+0)
+b11 ?
 1"
 #240000
 0"
 #250000
-b10 ?
+1&
+b100 ?
 1"
 #260000
+b0 0
+b0 A
+b0 I
 0"
 #270000
-b11 ?
+1%
+0&
+b101 ?
 1"
 #280000
+b1100000 -
+b1100000 D
+b1 1
+b1 F
+b1 J
 0"
 #290000
-b100 ?
+0%
+b10 4
+b110 ?
 1"
 #300000
 0"
 #310000
-b101 ?
+1*
+b1 ?
 1"
 #320000
+b1 0
+b1 A
+b1 I
+b101 /
+b101 2
+b101 K
 0"
 #330000
-b110 ?
+1)
+0*
+b10 ?
 1"
 #340000
 0"
 #350000
-b111 ?
+0)
+b11 ?
 1"
 #360000
 0"
 #370000
-b1000 ?
+1&
+b100 ?
 1"
 #380000
-0"
-#390000
-b1001 ?
-1"
-#400000
-0"
-#410000
-0.
-1'
-b0 @
-b1010 ?
-1"
-#420000
-b0 +
-b0 3
+b0 0
 b0 A
 b0 I
-b0 ,
-b0 C
-b0 J
-b0 /
-b0 2
-b0 M
-b0 0
-b0 B
-b0 K
-b110010 -
-b110010 E
+0"
+#390000
+1%
+0&
+b101 ?
+1"
+#400000
+b10 G
+b10000000 -
+b10000000 D
+b11 1
+b11 F
+b11 J
+0"
+#410000
+0%
+b1 4
+b110 ?
+1"
+#420000
 0"
 #430000
-b0 ?
+1*
+b1 ?
 1"
 #440000
+b10 0
+b10 A
+b10 I
+b1101 /
+b1101 2
+b1101 K
+b11111011 +
+b11111011 3
+b11111011 @
 0"
 #450000
+1)
+0*
+b10 ?
 1"
 #460000
+15
+1E
+b11111101 ,
+b11111101 B
+b11111101 H
 0"
 #470000
+0)
+b11 ?
 1"
 #480000
 0"
 #490000
+1%
+b101 ?
 1"
 #500000
+b0 G
+b110 1
+b110 F
+b110 J
+b0 -
+b0 D
 0"
 #510000
+0%
+b110 ?
+1(
+b0 4
 1"
 #520000
 0"
 #530000
+1.
+b111 ?
 1"
 #540000
 0"
 #550000
+b1 >
 1"
 #560000
 0"
 #570000
+b10 >
 1"
 #580000
 0"
 #590000
+b11 >
 1"
 #600000
 0"
 #610000
+b100 >
 1"
 #620000
 0"
 #630000
+b101 >
 1"
 #640000
 0"
 #650000
+b110 >
 1"
 #660000
 0"
 #670000
+b111 >
 1"
 #680000
 0"
 #690000
+b1000 >
 1"
 #700000
 0"
 #710000
+b1001 >
 1"
 #720000
 0"
 #730000
+0.
+1'
+b0 ?
+b1010 >
 1"
 #740000
+05
+0E
+b0 ,
+b0 B
+b0 H
+b0 /
+b0 2
+b0 K
+b0 0
+b0 A
+b0 I
+b0 1
+b0 F
+b0 J
+b10110 -
+b10110 D
 0"
 #750000
+b0 >
+0(
+b100 4
 1"
 #760000
 0"

@@ -2,16 +2,15 @@ module tcct(
             input clk,
             input rs,
             input cct,
-            input [4:0] Q,
-            output reg [5:0] T
+            input [7:0] Q,
+            output reg [7:0] T
             );
 
   always @(negedge clk) begin
     if (rs)
-      T = 0;
+      T = 8'b0;
     if (cct) begin
-      T = Q << 2;
-      T = T + 01;
+      T = (Q << 2) + 8'b00000001;
     end
     else
       T = T;
