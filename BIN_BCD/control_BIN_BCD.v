@@ -3,7 +3,7 @@ module control_BIN_BCD(
                     input init,
                     input rst,
                     input B,
-                    input z,
+                    input h,
 
                     output reg rs,
                     output reg asg,
@@ -38,15 +38,16 @@ end
 reg [3:0]count;
 
   always @(posedge clk) begin
-    if (rs)
+    if (rst)
     state = START;
     else begin
     case(state)
 
     START:begin
       count = 0;
-      if (init)
+      if (init)begin
         state = CONCAT;
+      end
       else
         state = START;
     end
@@ -58,26 +59,26 @@ reg [3:0]count;
       state = ASIG;
 
     ASIG:
-      state = CHECK;
+      state = CHECK1;
 
     CHECK1:
       state = COREG;
 
     COREG:
-      state = CHECK;
+      state = CHECK2;
 
     CHECK2:
-      if (j)
+      if (h)
         state = DONE;
       else
         state = CONCAT;
 
-      END:begin
+      DONE:begin
         count = count + 1;
         if (count>9)
           state = START;
         else
-          state = END;
+          state = DONE;
         end
 
         default:

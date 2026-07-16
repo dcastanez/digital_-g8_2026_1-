@@ -1,23 +1,18 @@
-module comp(
+module compb(
             input clk,
             input rs,
             input asg,
             input crc,
-            input [3:0]R,
-            output reg [3:0]o
+            input [7:0] B,
+            input [7:0] R,
+            output reg [7:0]o
             );
 
   always @ (negedge clk)
     if (rs)
-      o = 0;
+      o = B;
     else if (asg)
       o = R;
-    else if (crc) begin
-      if (R >= 4'b0101)
-        o = R + 4'b0011;
-      else
-        o = R;
-    end
     else
       o = o;
 endmodule

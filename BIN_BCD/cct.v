@@ -3,18 +3,15 @@ module cct(
             input rs,
             input cct,
             input sh,
-            input B,
-            input C,
-            input D,
-            input U,
-            output reg R
+            input [7:0] B,
+            input [3:0] C,
+            input [3:0] D,
+            input [3:0] U,
+            output reg [19:0] R
             );
+initial R = 0;
 
   always @(negedge clk) begin
-    if (rs)
-      C = 0;
-      D = 0;
-      U = 0;
     if (cct)
       R = {C, D, U, B};
     if (sh)
