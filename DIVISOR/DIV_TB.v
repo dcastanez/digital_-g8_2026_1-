@@ -47,20 +47,18 @@ module DIV_TB;
     end
   end
 
+
   reg [20:0] i;
   initial begin
-    #10
-    -> reset_trigger;
-
+    #10 -> reset_trigger;
     @ (reset_done_trigger);
-
-    @ (posedge clk);
-      init = 0;
-
-    @ (posedge clk);
-      init = 1;
-
+    @ (posedge clk); init = 0;
+    @ (posedge clk); init = 1;
     for (i = 0; i < 2; i = i + 1) begin
+      @ (posedge clk);
+    end
+    init = 0;
+    for (i = 0; i < 17; i = i + 1) begin
       @ (posedge clk);
     end
   end

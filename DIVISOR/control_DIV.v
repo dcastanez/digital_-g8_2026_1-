@@ -11,9 +11,9 @@ module control_DIV(
                    );
   parameter CHECK = 3'b000;
   parameter START = 3'b001;
-  parameter DEC = 3'b010;
+  parameter DEC   = 3'b010;
   parameter ACC   = 3'b011;
-  parameter END  = 3'b100;
+  parameter END   = 3'b100;
 
   reg [2:0] state;
 
@@ -50,6 +50,14 @@ module control_DIV(
           state = END;
         else
           state = ACC;
+      end
+
+      END:begin
+        count = count + 1;
+        if (count>9)
+          state = START;
+        else
+          state = END;
       end
 
       ACC:
@@ -97,7 +105,7 @@ module control_DIV(
         rs   = 0;
         de   = 0;
         ac   = 0;
-        done = 0;
+        done = 1;
       end
 
       default:begin
